@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Administrateur</title>
+    <script src="../js/script.js"></script>
+    <!-- <script>
+        verifierAcces("admin");
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Librairie pour les graphiques -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>⚙️ Espace Administrateur</h1>
+        <a href="index.html">Retour à l'accueil</a>
+    </header>
+
+    <section id="gestion-comptes">
+        <h2>👥 Gestion des Comptes</h2>
+        <div id="liste-comptes"></div>
+    </section>
+    
+    <section id="ajout-employe">
+        <h2>➕ Ajouter un employé</h2>
+        <form id="form-ajout-employe">
+            <label>Nom :</label>
+            <input type="text" id="nom-employe" required>
+            
+            <label>Email :</label>
+            <input type="email" id="email-employe" required>
+            
+            <label>Mot de passe :</label>
+            <input type="password" id="mdp-employe" required>
+    
+            <button type="submit" class="btn btn-primary">Créer l'employé</button>
+        </form>
+    </section>
+    
+
+    <section id="statistiques">
+        <h2>📊 Statistiques</h2>
+        <canvas id="graphique-covoiturages"></canvas>
+        <canvas id="graphique-gains"></canvas>
+    </section>
+
+</body>
+</html>

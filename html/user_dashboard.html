@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Utilisateur</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Espace Utilisateur</h1>
+        <nav class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="#" id="deconnexion-link">Déconnexion</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section choix du rôle -->
+        <section class="card-large">
+            <h2>Choisissez votre rôle</h2>
+            <form id="role-form" class="centered-form">
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="role" value="chauffeur"> Chauffeur
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="passager"> Passager
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="les_deux"> Les deux
+                        </label>
+                    </div>
+                    <div id="passenger-save" style="display: none;">
+                        <button id="savePassenger">Enregistrer</button>
+                    </div>
+        </section>
+
+        <!-- Section formulaire chauffeur -->
+        <section id="chauffeur-options" class="card-large hidden">
+            <h2>Informations du Chauffeur</h2>
+            <form id="chauffeur-form">
+                <div class="input-group">
+                    <label for="plaque">Plaque d'immatriculation :</label>
+                    <input type="text" id="plaque" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="date-immatriculation">Date de première immatriculation :</label>
+                    <input type="date" id="date-immatriculation" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="modele">Modèle & Marque :</label>
+                    <input type="text" id="modele" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="couleur">Couleur :</label>
+                    <input type="text" id="couleur" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="places">Nombre de places disponibles :</label>
+                    <input type="number" id="places" min="1" required>
+                </div>
+
+                <h3>Préférences</h3>
+                <div class="preferences">
+                    <label>
+                        <input type="checkbox" name="fumeur" value="oui"> Accepte les fumeurs
+                    </label>
+                    <label>
+                        <input type="checkbox" name="animaux" value="oui"> Accepte les animaux
+                    </label>
+                </div>
+
+                <button type="submit">Enregistrer</button>
+            </form>
+        </section>
+
+        <section id="chauffeur-trajets" class="card-large hidden">
+            <h2>Mes trajets</h2>
+            <div id="trajets-en-cours">
+                <!-- Les trajets en cours seront affichés ici -->
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2025 - Plateforme de covoiturage</p>
+    </footer>
+
+    <script src="../js/script.js"></script> <!-- 🔗 Lien vers le fichier JS -->
+</body>
+</html>

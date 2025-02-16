@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saisir un voyage</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <h3>💰 Mon solde de crédits : <span id="credit-solde">0</span> crédits</h3>
+    </div>
+    
+    <div class="container mt-5">
+        <h2 class="text-center text-success">Saisir un voyage</h2>
+        
+        <form id="voyageForm" class="mt-4">
+            <div class="card p-4">
+                <div class="mb-3">
+                    <label for="adresseDepart" class="form-label">Adresse de départ :</label>
+                    <input type="text" class="form-control" id="adresseDepart" required>
+                </div>
+                <div class="mb-3">
+                    <label for="adresseArrivee" class="form-label">Adresse d'arrivée :</label>
+                    <input type="text" class="form-control" id="adresseArrivee" required>
+                </div>
+                <div class="mb-3">
+                    <label for="dateTrajet" class="form-label">Date du trajet :</label>
+                    <input type="date" class="form-control" id="dateTrajet" required>
+                </div>
+                <div class="mb-3">
+                    <label for="vehicule" class="form-label">Véhicule :</label>
+                    <select class="form-select" id="vehicule" required>
+                        <option value="">Sélectionnez un véhicule</option>
+                        <option value="Tesla Model 3">Tesla Model 3</option>
+                        <option value="Peugeot 208">Peugeot 208</option>
+                        <option value="Renault Clio">Renault Clio</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="nBplace" class="form-label">Nombre de place  :</label>
+                    <input type="number" class="form-control" id="nBplace" required>
+                </div>
+                <div class="mb-3">
+                    <label for="prix" class="form-label">Prix :</label>
+                    <input type="number" class="form-control" id="prix" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Enregistrer le voyage</button>
+                <button type="button" id="button_histories" class="btn btn-success w-100" href="historie.html">Historique</button>
+            </div>
+        </form>
+    </div>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script> <!-- 🔗 Lien vers le fichier JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btnHistorique = document.getElementById("button_histories");
+    
+            if (btnHistorique) {
+                btnHistorique.addEventListener("click", function () {
+                    window.location.href = "historie.html"; // Redirige vers la page d'historique
+                });
+            } else {
+                console.warn("⚠ Le bouton 'button_histories' n'a pas été trouvé !");
+            }
+        });
+    </script>
+</body>
+</html>
