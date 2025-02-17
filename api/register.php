@@ -2,7 +2,12 @@
 
 require '../config/database.php';
 header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
+// CORS
+$allowedOrigins = [
+    "http://localhost:3000",  // Dev
+    "https://red-lion-139713.hostingersite.com",  // Domaine principal
+    "https://red-lion-139713.hostingersite.com/ECF/EcoRide", // Sous-répertoire du projet
+];
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 

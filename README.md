@@ -5,29 +5,49 @@ EcoRide est une application de covoiturage permettant aux utilisateurs de propos
 
 ## 📂 Structure du projet
 ```
-├── api/               # Dossier contenant les fichiers PHP (backend)
-│   ├── login.php      # Gestion de l'authentification
-│   ├── session.php    # Vérification de la session utilisateur
-│   ├── ad_trajet.php  # Ajout de trajets
-│   ├── get_trajet.php # Récupération des trajets disponibles
-|   |──
-|   |──
-|   |──
-|   |──
-|   |──
-|   |──
-├── html/              # Fichiers HTML (frontend)
-│   ├── index.html     # Page principale
-│   ├── login.html     # Page de connexion
-│   ├── user_space.html # Espace utilisateur
-|   |──
-|   |──
-|   |──
-├── js/                # Scripts JavaScript
-│   ├── script.js      # Scripts principaux de l'application
-├── config.php         # Configuration de la base de données
-├── README.md          # Ce fichier
-├── database.sql       # Script SQL pour créer la base de données
+├── api/                        # Dossier contenant les fichiers PHP (backend)
+│   ├── login.php               # Gestion de l'authentification
+│   ├── session.php             # Vérification de la session utilisateur
+│   ├── ad_trajet.php           # Ajout de trajets
+│   ├── get_trajet.php          # Récupération des trajets disponibles
+|   |──add_trajet.php           # Ajouter des trajets a la base de Donnée
+|   |──admin_reservation.php    # Permet à l'admin de voirs les reservation
+|   |──annuler_reservation.php  # Permet à user de  d'annuler ces reservationn 
+|   |──get_notification.php     # Permet d'envoyer une notification a user 
+|   |──config.php               # Fichier contenant les infos de configurations
+|   |──authMiddleware.php       # Permet de block les pages uniquement reserver a l'admin 
+|   |──login.php                # Connection utilisateur ( admin , user)
+|   |──logout.php               # Decconection utilisateur en cours
+|   |──register.php             # S'inscrire
+|   |──mes_reservations.php     # Voirs ces reservations
+|   |──rechercher_trajets.php   # Rechercher les trajerts
+|   |──reserver_trajets.php     # Reserver les trajets
+|   |──session.php              # Voirs la  session en cours
+|   |── uptade_role.php         # Permet a admin de changer le role d'un user
+|   |── valider_reservation     # Permet a admin de valider reservation 
+|   |──  #
+|   |──  #
+├── html/                       # Fichiers HTML (frontend)
+│   ├── index.html              # Page principale
+│   ├── login.html              # Page de connexion
+│   ├── user_space.html         # Espace utilisateur
+|   |── admin_dashoard.html     # Espace admin
+|   |── détail.html             # Detail voyage
+|   |── employer_dasboard.html  # Espace employee
+|   |── historie.html           # Historique des voyage utilisateur
+|   |── singup.html             # Inscription
+|   |──  #
+|   |──  #
+├── js/                         # Scripts JavaScript
+│   ├── script.js               # Scripts principaux de l'application
+├── css/
+|   |── style.css               # Fichier style generer pas le scss
+|   |── style.css.map           # Fichier generer par le sass
+|   |── style.scss              # Fichier scss a modifier pour le style 
+├── backup.php                  # Ficher utiliser en dev pour stocker des du code visant a etre remplacer , pour avoir un back up
+├── note.php                    # Ficher pense bête
+├── README.md                   # Ce fichier
+├── database.sql                # Script SQL pour créer la base de données
 ```
 
 ## 🛠️ Installation

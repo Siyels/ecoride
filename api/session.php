@@ -12,7 +12,8 @@ session_start();
 // CORS
 $allowedOrigins = [
     "http://localhost:3000",  // Dev
-    "https://mon-site.com"    // Production
+    "https://red-lion-139713.hostingersite.com",  // Domaine principal
+    "https://red-lion-139713.hostingersite.com/ECF/EcoRide", // Sous-répertoire du projet
 ];
 if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
     header("Access-Control-Allow-Origin: " . $_SERVER['HTTP_ORIGIN']);

@@ -1,7 +1,5 @@
--- Supprime la base si elle existe déjà (Attention ! Supprime toutes les données existantes)
-DROP DATABASE IF EXISTS ecoride;
-CREATE DATABASE ecoride;
-USE ecoride;
+
+USE u933116052_ecoride;
 
 -- 🏗️ Table des utilisateurs
 CREATE TABLE users (
